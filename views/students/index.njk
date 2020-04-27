@@ -1,0 +1,55 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="card table-container">
+
+    <table width="100%">
+      <a href="/students/create">Novo</a>
+
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Email</th>
+          <th>Ano Escolar</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for student in students %}
+          <input type="hidden" name="id" value="{{student.id}}">
+          <tr>
+            <td>
+              <span style="background-image: url({{student.avatar_url}})"></span>
+              {{student.name}}</td>
+            <td>
+              {{student.email}}
+            </td>
+            <td>
+              {% if student.year == "5th-elementary" %}
+                5º Ano - Ensino Fundamental
+              {% elif student.year == "6th-elementary" %}
+                6º Ano - Ensino Fundamental
+              {% elif student.year == "7th-elementary" %}
+                7º Ano - Ensino Fundamental
+              {% elif student.year == "8th-elementary" %}
+                8º Ano - Ensino Fundamental
+              {% elif student.year == "1st-high" %}
+                1º Ano - Ensino medio
+              {% elif student.year == "2nd-high" %}
+                2º Ano - Ensino medio
+              {% elif student.year == "3rd-high" %}
+                3º Ano - Ensino medio
+              {% endif %}
+            </td>
+            <td>
+              <a href="/students/{{student.id}}">Ver</a>
+            </td>
+          </tr>
+
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+
+  {% endblock content %}
