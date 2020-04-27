@@ -1,6 +1,6 @@
-# My Teacher
+# :books:My Teacher
 
-Página fictícia para cadastro de alunos e professores em uma universidade. :books:
+Aplicação de cadastros de alunos e professores em um banco de dados relacional. :book:
 
 
 ## Informações
