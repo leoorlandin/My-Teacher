@@ -1,6 +1,5 @@
 # My Teacher
 
-
 Página fictícia para cadastro de alunos e professores em uma universidade. :books:
 
 
@@ -8,7 +7,9 @@ Página fictícia para cadastro de alunos e professores em uma universidade. :bo
 
 O projeto ainda está sendo desenvolvido conforme os desafios e novos conhecimentos são passados ao decorrer do curso. 
 
-## Iniciando o projeto
+Este projeto é um remake do repositório [University Catalog](https://github.com/leoorlandin/UnivesityCatalog) utilizando banco de dados relacional.
+
+<!-- ## Iniciando o projeto
 
 - clone o repositório `git clone https://github.com/leoorlandin/UnivesityCatalog`
 - vá até a raiz do projeto `cd /UnivesityCatalog`
@@ -24,4 +25,4 @@ O projeto ainda está sendo desenvolvido conforme os desafios e novos conhecimen
 ## Necessário para utilizar a aplicação
 
 - [NodeJS](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com/) ou qualquer outro gerenciador de pacotes de sua preferência
+- [NPM](https://www.npmjs.com/) ou qualquer outro gerenciador de pacotes de sua preferência -->
