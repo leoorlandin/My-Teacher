@@ -1,4 +1,4 @@
-const { date, grade, age } = require('../../lib/util')
+const { date, age } = require('../../lib/util')
 const Teacher = require('../models/Teacher')
 
 
@@ -72,14 +72,14 @@ module.exports = {
       }
     }
 
-    Teacher.update(req.body, function(){
+    Teacher.update(req.body, function () {
       return res.redirect(`/teachers/${req.body.id}`)
     })
 
   },
   delete(req, res) {
 
-    Teacher.delete(req.body.id, function(){
+    Teacher.delete(req.body.id, function () {
       return res.redirect('teachers')
     })
 
