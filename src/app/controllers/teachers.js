@@ -31,7 +31,7 @@ module.exports = {
     }
 
     Teacher.create(req.body, function (teacher) {
-      return res.redirect("teachers/index")
+      return res.redirect(`/teachers/${teacher.id}`)
     })
 
 
@@ -53,7 +53,13 @@ module.exports = {
   },
   edit(req, res) {
 
-    return
+    Teacher.find(req.params.id, function (teacher) {
+      if (!teacher) res.send('Teacher not found')
+
+      teacher.birth_date = date(teacher.birth_date).iso
+
+      return res.render(`teachers/edit`, { teacher })
+    })
 
   },
   put(req, res) {
