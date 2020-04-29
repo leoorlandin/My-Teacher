@@ -8,6 +8,7 @@ module.exports = {
 
     Teacher.all(function (teachers) {
 
+
       return res.render("teachers/index", { teachers })
     })
 

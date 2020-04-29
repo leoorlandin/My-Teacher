@@ -25,22 +25,18 @@
       <div class="item">
         <div>Ano escolar</div>
         <div>
-        {{student.year}}
+          {{student.year}}
         </div>
       </div>
 
       <div class="item">
-        <div>
-          Horas semanais
-          <div>{{student.workload}}</div>
-        </div>
+        <div>Horas semanais</div>
+        <div>{{student.workload}}</div>
 
       </div>
 
       <a href="/students/{{student.id}}/edit" class="button">Editar</a>
 
-    </div>
-  </section>
-</div>
-
+    </section>
+  </div>
 {% endblock content %}
