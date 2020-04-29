@@ -19,10 +19,11 @@
           <tr>
             <td>
               <span style="background-image: url({{teacher.avatar_url}})"></span>
-              {{teacher.name}}</td>
+              {{teacher.name}}
+            </td>
             <td id="teacher-areas">
-              {% for area in teacher.areas %}
-                <span>{{area}}</span>
+              {% for subject in teacher.subjects_taught %}
+                <span>{{subject}}</span>
                 <input type="hidden" name="id" value="{{teacher.id}}">
               {% endfor %}
             </td>

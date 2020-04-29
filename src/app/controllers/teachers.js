@@ -1,11 +1,16 @@
 const { date, grade } = require('../../lib/util')
+const Teacher = require('../models/Teacher')
 
 
 module.exports = {
 
   index(req, res) {
 
-    return res.render("teachers/index")
+    Teacher.all(function (teachers) {
+
+      return res.render("teachers/index", { teachers })
+    })
+
 
 
   },
@@ -25,7 +30,9 @@ module.exports = {
       }
     }
 
-    return
+    Teacher.create(req.body, function (teacher) {
+      return res.redirect('teachers/index')
+    })
 
 
   },
