@@ -7,8 +7,6 @@ module.exports = {
   index(req, res) {
 
     Teacher.all(function (teachers) {
-
-
       return res.render("teachers/index", { teachers })
     })
 

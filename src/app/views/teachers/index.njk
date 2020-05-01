@@ -9,6 +9,7 @@
         <tr>
           <th>Professor</th>
           <th>Aulas Ministradas</th>
+          <th>Alunos</th>
           <th>Ação</th>
         </tr>
       </thead>
@@ -26,6 +27,9 @@
                 <span>{{subject}}</span>
                 <input type="hidden" name="id" value="{{teacher.id}}">
               {% endfor %}
+            </td>
+            <td>
+              {{teacher.total_students}}
             </td>
             <td>
               <a href="/teachers/{{teacher.id}}">Ver</a>
