@@ -3,8 +3,16 @@
 {% block content %}
   <div class="card table-container">
 
+    <div class="header">
+      <a class="button" href="/teachers/create">Novo</a>
+      <form action="/teachers" method="get">
+        <input type="text" name="filter" placeholder="Nome ou Disciplina" value="{{filter}}">
+        <button type="submit">Filtrar</button>
+      </form>
+    </div>
+
     <table width="100%">
-      <a href="/teachers/create">Novo</a>
+
       <thead>
         <tr>
           <th>Professor</th>
@@ -25,7 +33,6 @@
             <td id="teacher-areas">
               {% for subject in teacher.subjects_taught %}
                 <span>{{subject}}</span>
-                <input type="hidden" name="id" value="{{teacher.id}}">
               {% endfor %}
             </td>
             <td>
