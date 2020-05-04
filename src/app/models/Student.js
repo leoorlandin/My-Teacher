@@ -22,7 +22,7 @@ module.exports = {
         year,
         workload,
         teacher_id
-      )VALUES ($1, $2, $3, $4, $5, $6, 7$)
+      )VALUES ($1, $2, $3, $4, $5, $6, $7)
       RETURNING id
     `
 
@@ -33,7 +33,7 @@ module.exports = {
       date(data.birth_date).iso,
       data.year,
       data.workload,
-      data.teacher_id
+      data.teacher
     ]
 
     db.query(query, values, function (err, results) {
@@ -47,7 +47,7 @@ module.exports = {
     db.query(`SELECT students.*, teachers.name AS teacher_name 
     FROM students 
     LEFT JOIN teachers ON (students.teacher_id = teachers.id)
-    WHERE teachers.id = $1`, [id], function (err, results) {
+    WHERE students.id = $1`, [id], function (err, results) {
       if (err) throw `Database error ${err}`
 
       callback(results.rows[0])
@@ -75,7 +75,7 @@ module.exports = {
       data.birth_date,
       data.year,
       data.workload,
-      data.teacher_id,
+      data.teacher,
       data.id
     ]
 
