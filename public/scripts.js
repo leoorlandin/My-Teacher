@@ -47,9 +47,9 @@ function creactePagination(pagination) {
     } else {
 
       if (filter) {
-        elements += `<a href="?page=${page}&filter=${filter}>${page}</a>`
+        elements += `<a href="?page=${page}"&filter=${filter}>${page}</a>`
       } else {
-        elements += `<a href="?page=${page}>${page}</a>`
+        elements += `<a href="?page=${page}">${page}</a>`
 
       }
 
