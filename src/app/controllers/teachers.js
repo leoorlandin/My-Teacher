@@ -6,17 +6,35 @@ module.exports = {
 
   index(req, res) {
 
-    const { filter } = req.query
+    let { filter, page, limit } = req.query
 
-    if (filter) {
-      Teacher.findBy(filter, function (teachers) {
+    page = page || 1
+    limit = limit || 2
+    let offset = limit * (page - 1)
+
+    let params = {
+      filter,
+      page,
+      limit,
+      offset,
+      callback(teachers){
         return res.render("teachers/index", { filter, teachers })
-      })
-    } else {
-      Teacher.all(function (teachers) {
-        return res.render("teachers/index", { teachers })
-      })
+      }
     }
+
+    Teacher.pagination(params)
+
+
+
+    // if (filter) {
+    //   Teacher.findBy(filter, function (teachers) {
+    //     return res.render("teachers/index", { filter, teachers })
+    //   })
+    // } else {
+    //   Teacher.all(function (teachers) {
+    //     return res.render("teachers/index", { teachers })
+    //   })
+    // }
 
 
 
