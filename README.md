@@ -7,7 +7,7 @@ Aplicação de cadastros de alunos e professores em um banco de dados relacional
 
 O projeto ainda está sendo desenvolvido conforme os desafios e novos conhecimentos são passados ao decorrer do curso. 
 
-Este projeto é um remake do repositório [University Catalog](https://github.com/leoorlandin/UnivesityCatalog), utilizando banco de dados relacional [(PostgreSQL)](https://www.postgresql.org/).
+Este projeto é um remake do repositório [University Catalog](https://github.com/leoorlandin/UnivesityCatalog), utilizando banco de dados relacional ([PostgreSQL](https://www.postgresql.org/)).
 
 <!-- ## Iniciando o projeto
 
