@@ -26,4 +26,4 @@ Este projeto é um remake do repositório [University Catalog](https://github.co
 <!-- ## Necessário para utilizar a aplicação
 
 - [NodeJS](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com/) ou qualquer outro gerenciador de pacotes de sua preferência --> -->
+- [NPM](https://www.npmjs.com/) ou qualquer outro gerenciador de pacotes de sua preferência -->
